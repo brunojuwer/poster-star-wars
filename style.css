@@ -37,3 +37,43 @@ body {
     opacity: 1;
   }
 }
+
+.clone-1 {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  top: 150px;
+  transform: translateX(-200px);
+  animation: show-clone-1 2s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-clone-1 {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.clone-2 {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 150px;
+  transform: rotateY(180deg) translateX(200px);
+  animation: show-clone-2 2s linear 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes show-clone-2 {
+  from {
+    transform:  translateX(200px);
+  }
+  to {
+    transform: rotateY(180deg) translateX(0px);
+  }
+}
+
