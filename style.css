@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+
+}
+
+.container {
+  max-width: 564px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background: url('/assets/start_wars1.jpg') no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title-1 {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: show-title 2s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
