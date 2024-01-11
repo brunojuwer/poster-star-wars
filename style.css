@@ -46,7 +46,7 @@ body {
   left: 0;
   top: 150px;
   transform: translateX(-200px);
-  animation: show-clone-1 2s linear 1;
+  animation: show-clone-1 2s ease-out 1;
   animation-fill-mode: forwards;
 }
 
@@ -66,7 +66,7 @@ body {
   right: 0;
   top: 150px;
   transform: rotateY(180deg) translateX(200px);
-  animation: show-clone-2 2s linear 1;
+  animation: show-clone-2 2s ease-out 1;
   animation-fill-mode: forwards;
 
 }
@@ -82,16 +82,46 @@ body {
 
 .laser-clone-1 {
   position: absolute;
-  z-index: 5;
-  top: 150px;
+  z-index: -5;
+  top: 155px;
+  left: 0px;
   width: 60px;
   transform: rotateY(180deg);
+  animation: laser-shot-1 .3s linear 3;
+  animation-delay: 3s;
+}
+
+@keyframes laser-shot-1 {
+  from {
+    z-index: -5;
+    left: 0px;
+  }
+
+  to {
+    z-index: 5;
+    left: 300px;
+  }
 }
 
 .laser-clone-2 {
   position: absolute;
-  z-index: 5;
+  z-index: -5;
   top: 155px;
-  right: 50px;
   width: 60px;
+  right: 0px;
+
+  animation: laser-shot-2 .3s linear 3;
+  animation-delay: 3s;
+}
+
+@keyframes laser-shot-2 {
+  from {
+    z-index: -5;
+    right: 0px;
+  }
+
+  to {
+    z-index: 5;
+    right: 300px;
+  }
 }
