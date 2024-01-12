@@ -96,13 +96,6 @@ body {
   }
 }
 
-.clone img {
-  opacity: 1;
-  height: 650px;
-  transform: rotateY(180deg);
-  animation: clone 2s ease-out 1;
-}
-
 .ship img {
   width: 100px;
   position: absolute;
