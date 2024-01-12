@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+ }
+ 
+ .star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+ }
+ 
+ .star-wars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellow;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 2rem;
+ }
+
+ .crawl {
+    position: relative;
+    animation: crawl 40s linear infinite;
+}
+
+@keyframes crawl {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(-500%);
+  }
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.force {
+  margin-top: 4rem;
+  font-size: 3rem;
+  font-style: italic;
+}

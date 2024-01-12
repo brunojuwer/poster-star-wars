@@ -2,126 +2,122 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background: black;
   
 }
 
-.container {
-  max-width: 564px;
-  width: 100%;
-  margin: 0 auto;
-  height: 100vh;
-  background: url('/assets/start_wars1.jpg') no-repeat;
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+@font-face {
+  font-family: Starwars;
+  src: url('/font/star-jedi/Starjhol.ttf');
 }
 
-.title-1 {
-  opacity: 0;
-  transform: translateY(70px);
-  animation: show-title 2s linear 1;
+@font-face {
+  font-family: Starwars-jedi;
+  src: url('/font/star-jedi/Starjedi.ttf');
+}
+
+body {
+  overflow-x: hidden;
+  background: black;
+  animation: change-background 1s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+@keyframes change-background {
+  from {
+    background: black;
+  }
+  to {
+    background: url('/assets/background.png') no-repeat;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}
+
+.container {
+  background: transparent;
+  width: 100vw;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.poster-1 {
+  transform: translateY(-1000px);
+  margin-top: 2rem;
+  animation: show-poster 2s linear 1;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
 }
 
-@keyframes show-title {
-  from {
-    opacity: 0;
-  }
+.title {
+  font-family: Starwars;
+  font-size: 9rem;
+  text-align: center;
+  color: yellow;
+  animation: bounce 4s linear 6s infinite;
+}
 
-  to {
-    opacity: 1;
+.second-title {
+  color: white;
+  font-family: Starwars-jedi;
+  font-size: 3rem;
+  text-align: center;
+  animation: bounce 4s linear 6s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
     transform: translateY(0);
   }
 }
 
-.clone-1 {
-  z-index: 10;
-  width: 100px;
-  position: absolute;
-  left: 0;
-  top: 150px;
-  transform: translateX(-200px);
-  animation: show-clone-1 2s ease-out 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes show-clone-1 {
+@keyframes show-poster {
   from {
-    transform: translateX(-200px);
+    transform: translateY(-1000px);
   }
+
   to {
-    transform: translateX(0px);
+    transform: translateY(0);
   }
 }
 
-.clone-2 {
-  z-index: 10;
-  width: 100px;
-  position: absolute;
-  right: 0;
-  top: 150px;
-  transform: rotateY(180deg) translateX(200px);
-  animation: show-clone-2 2s ease-out 1;
-  animation-fill-mode: forwards;
-
-}
-
-@keyframes show-clone-2 {
-  from {
-    transform:  translateX(200px);
-  }
-  to {
-    transform: rotateY(180deg) translateX(0px);
-  }
-}
-
-.laser-clone-1 {
-  position: absolute;
-  z-index: -5;
-  top: 155px;
-  left: 0px;
-  width: 60px;
+.clone img {
+  opacity: 1;
+  height: 650px;
   transform: rotateY(180deg);
-  animation: laser-shot-1 .3s linear 3;
-  animation-delay: 3s;
+  animation: clone 2s ease-out 1;
 }
 
-@keyframes laser-shot-1 {
-  from {
-    z-index: -5;
-    left: 0px;
-  }
-
-  to {
-    z-index: 5;
-    left: 300px;
-  }
-}
-
-.laser-clone-2 {
+.ship img {
+  width: 100px;
   position: absolute;
-  z-index: -5;
-  top: 155px;
-  width: 60px;
-  right: 0px;
-
-  animation: laser-shot-2 .3s linear 3;
-  animation-delay: 3s;
+  z-index: 10;
+  top: -100px;
+  right: -100px;
+  animation: move-ship 5s linear 1;
 }
 
-@keyframes laser-shot-2 {
-  from {
-    z-index: -5;
-    right: 0px;
+@keyframes move-ship {
+  0% {
+    width: 105px;
   }
 
-  to {
-    z-index: 5;
-    right: 300px;
+  100% {
+    width: 7655px;
   }
 }
