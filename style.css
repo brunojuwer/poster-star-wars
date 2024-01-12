@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: Starwars;
-  src: url('/font/star-jedi/Starjhol.ttf');
+  src: url('./font/star-jedi/Starjhol.ttf');
 }
 
 @font-face {
   font-family: Starwars-jedi;
-  src: url('/font/star-jedi/Starjedi.ttf');
+  src: url('./font/star-jedi/Starjedi.ttf');
 }
 
 body {
@@ -28,7 +28,7 @@ body {
     background: black;
   }
   to {
-    background: url('/assets/background.png') no-repeat;
+    background: url('./assets/background.png') no-repeat;
   }
 }
 
