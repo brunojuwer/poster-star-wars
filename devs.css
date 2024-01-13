@@ -29,14 +29,13 @@ body {
 
 .crawl {
   position: relative;
-  animation: crawl 30s linear infinite;
+  animation: crawl 30s linear 1;
 }
 
 @keyframes crawl {
   from {
-    transform: rotateX(21deg) translate3d(0, 100rem, 0);
+    transform: rotateX(21deg) translate3d(0, 40rem, 0);
     opacity: 1;
-
   }
 
   to {
@@ -46,7 +45,7 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
