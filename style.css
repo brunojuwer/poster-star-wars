@@ -71,6 +71,29 @@ body {
   animation: bounce 4s linear 6s infinite;
 }
 
+
+.glow {
+  padding: 13px;
+  font-size: 20px;
+  font-family: Starwars-jedi;
+  color: #fff;
+  text-align: left;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60026, 0 0 40px #e60026, 0 0 50px #f6e20a, 0 0 60px #e60026, 0 0 70px #e60026;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0a90f6, 0 0 40px #0a90f6, 0 0 50px #f6e20a, 0 0 60px #0a90f6, 0 0 70px #0a90f6, 0 0 80px #0a90f6;
+  }
+}
+
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
