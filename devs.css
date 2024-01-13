@@ -4,37 +4,44 @@ body {
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
   overflow-y: hidden;
- }
- 
- .star {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background-color: white;
- }
- 
- .star-wars {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: yellow;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 2rem;
- }
+}
 
- .crawl {
-    position: relative;
-    animation: crawl 40s linear infinite;
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}
+
+.star-wars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  perspective: 380px;
+  perspective-origin: bottom;
+  transform: scaleY(0.9);
+  transform: translate(-50%, -50%);
+  color: rgb(255, 208, 0);
+  text-align: center;
+  white-space: nowrap;
+  font-size: 2rem;
+}
+
+.crawl {
+  position: relative;
+  animation: crawl 30s linear infinite;
 }
 
 @keyframes crawl {
   from {
-      transform: translateY(100%);
+    transform: rotateX(21deg) translate3d(0, 100rem, 0);
+    opacity: 1;
+
   }
+
   to {
-      transform: translateY(-500%);
+    transform: rotateX(21deg) translate3d(0, -150rem, 0);
+    opacity: 0;
   }
 }
 
