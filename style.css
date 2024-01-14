@@ -72,14 +72,14 @@ body {
 .container {
   background: transparent;
   width: 100vw;
-  padding: 2rem;
+  padding: 5px;
   display: flex;
   justify-content: center;
 }
 
 .poster-1 {
   transform: translateY(-1000px);
-  margin-top: 1rem;
+  margin-top: 10px;
   animation: show-poster 1s linear 1;
   animation-delay: 4s;
   animation-fill-mode: forwards;
@@ -87,7 +87,7 @@ body {
 
 .title {
   font-family: Starwars;
-  font-size: 9rem;
+  font-size: 7rem;
   text-align: center;
   color: yellow;
   animation: bounce 4s linear 6s infinite;
@@ -96,7 +96,7 @@ body {
 .second-title {
   color: white;
   font-family: Starwars-jedi;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   animation: bounce 4s linear 6s infinite;
 }
@@ -171,6 +171,7 @@ body {
   
   position: absolute;
   font-size: 30px;
+  top: 80px;
   right: 0px;
   color: transparent;
   font-family: Starwars-jedi;
@@ -178,7 +179,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   animation: typing 22s steps(30) 8s infinite,
-    flashing-bar 800ms steps(30) 8s infinite normal,
+    flashing-bar 1s steps(30) 8s infinite normal,
     bounce 4s linear 15s infinite;
   border-color: transparent;
 }
@@ -198,10 +199,10 @@ body {
     transform: translateY(0);
   }
   25% {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
   100% {
     transform: translateY(0);
