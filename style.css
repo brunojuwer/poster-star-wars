@@ -50,8 +50,8 @@ body {
 .poster-1 {
   transform: translateY(-1000px);
   margin-top: 2rem;
-  animation: show-poster 2s linear 1;
-  animation-delay: 5s;
+  animation: show-poster 1s linear 1;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
 }
 
@@ -124,7 +124,7 @@ body {
   z-index: 10;
   top: -100px;
   right: -100px;
-  animation: move-ship 5s linear 1;
+  animation: move-ship 8s linear 1;
 }
 
 @keyframes move-ship {
@@ -140,7 +140,7 @@ body {
 .premiere-data {
   
   position: absolute;
-  font-size: 50px;
+  font-size: 30px;
   right: 0px;
   color: transparent;
   font-family: Starwars-jedi;
