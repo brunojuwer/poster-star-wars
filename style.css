@@ -14,21 +14,51 @@
   src: url('./font/star-jedi/Starjedi.ttf');
 }
 
-body {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background: black;
-  animation: change-background 1s linear 1;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/background.png') no-repeat;
+  background-size: cover;
+  opacity: 0;
+  z-index: -1;
+  animation: fadeInImage 1s linear 1;
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
 
-@keyframes change-background {
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: black;
+  transition: changeBackground 1s ease-in-out; 
+}
+
+.change-background {
+  animation: changeBackground 1s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes changeBackground {
   from {
     background: black;
   }
   to {
-    background: url('./assets/background.png') no-repeat;
+    background: transparent; 
   }
 }
 
@@ -49,7 +79,7 @@ body {
 
 .poster-1 {
   transform: translateY(-1000px);
-  margin-top: 2rem;
+  margin-top: 1rem;
   animation: show-poster 1s linear 1;
   animation-delay: 4s;
   animation-fill-mode: forwards;
