@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 @font-face {
@@ -17,6 +16,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
   background: black;
   animation: change-background 1s linear 1;
   animation-fill-mode: forwards;
@@ -73,14 +73,20 @@ body {
 
 
 .glow {
+  transform: translateY(1300px);
   padding: 13px;
   font-size: 20px;
   font-family: Starwars-jedi;
   color: #f5f0f0;
-  text-align: left;
+  text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate, show-devs 2s linear 6s 1 forwards;
+}
+
+.glow a {
+  color: #f5f0f0;
+  text-decoration: none;
 }
 
 @keyframes glow {
@@ -93,22 +99,6 @@ body {
   }
 }
 
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes show-poster {
   from {
     transform: translateY(-1000px);
@@ -116,6 +106,15 @@ body {
 
   to {
     transform: translateY(0);
+  }
+}
+@keyframes show-devs {
+  from {
+    transform: translateY(1300px);
+  }
+
+  to {
+    transform: translateY(28rem);
   }
 }
 
@@ -139,46 +138,70 @@ body {
 }
 
 .premiere-data {
+  
   position: absolute;
-  font-size: 30px;
+  font-size: 50px;
   right: 0px;
-  bottom: 0;
-  color: white;
+  color: transparent;
   font-family: Starwars-jedi;
   border-right: 5px solid white;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 22s steps(30) infinite,
-  flashing-bar 800ms steps(30) infinite normal;
+  animation: typing 22s steps(30) 8s infinite,
+    flashing-bar 800ms steps(30) 8s infinite normal,
+    bounce 4s linear 15s infinite;
+  border-color: transparent;
 }
+
 .movie-premiere {
   position: absolute;
-  right: 0px;
-  top: 0;
-  width: 28vw;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 47vw;
   height: 10vh;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes typing {
   0% {
     width: 0%;
+    color: white;
   }
   25% {
     width: 100%;
+    color: white;
   }
   75%{
     width: 100%;
+    color: white;
   }
   100% {
     width: 0%;
+    color: white;
   }
 }
 
 @keyframes flashing-bar {
   from {
-    border-color: white;
+    border-color: transparent;
   }
   to {
-    border-color: transparent;
+    border-color: white;
   }
 }
