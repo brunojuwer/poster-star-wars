@@ -137,3 +137,48 @@ body {
     width: 7655px;
   }
 }
+
+.premiere-data {
+  position: absolute;
+  font-size: 30px;
+  right: 0px;
+  bottom: 0;
+  color: white;
+  font-family: Starwars-jedi;
+  border-right: 5px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 22s steps(30) infinite,
+  flashing-bar 800ms steps(30) infinite normal;
+}
+.movie-premiere {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 28vw;
+  height: 10vh;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 100%;
+  }
+  75%{
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes flashing-bar {
+  from {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
