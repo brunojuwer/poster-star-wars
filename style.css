@@ -104,7 +104,7 @@ body {
 
 .glow {
   transform: translateY(1300px);
-  margin-top: 2.5rem;
+  margin-top: 5rem;
   padding: 13px;
   font-size: 20px;
   font-family: Starwars-jedi;
@@ -191,7 +191,7 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 47vw;
+  width: 29vw;
   height: 10vh;
 }
 
